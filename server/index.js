@@ -7,6 +7,9 @@ const { getAnswers, postAnswer, putAHelpful, putAReport } = require('./controlle
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+// loader.io stress testing
+app.get('/loaderio-974651846b5a58b6cfdc6799ba761df9.txt', (req, res) => res.send('loaderio-974651846b5a58b6cfdc6799ba761df9'));
+
 // questions
 app.get('/qa/questions', getQuestions);
 app.post('/qa/questions', postQuestion);
